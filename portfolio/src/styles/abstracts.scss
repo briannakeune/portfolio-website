@@ -1,7 +1,3 @@
-// fonts
-
-// variables
-
 // muted and minimal - light
 $white: #eeeeee;
 $dusty: #96858f;
@@ -10,12 +6,12 @@ $accent-lavender: #5f7096;
 $overcast: #9099a2;
 $dark-overcast: #5f6469;
 $paper: #e9e9e9;
-// muted and minimal - dark
-$dusty-dark: #be91ae;
-$lavender-dark: #44465c;
-$accent-lavender-dark: #7c91c0;
-$overcast-dark: #a2acb6;
-$dark-overcast-dark: #474b4e;
+
+// react palette
+$bright-blue: #61dafb;
+$dark-grey: #20232a;
+$medium-grey: #282c34;
+$light-grey: #33373f;
 
 // light-theme
 $primary-background: $paper;
@@ -26,12 +22,12 @@ $nav-accent: $overcast;
 $second-accent: $dusty;
 
 // dark-theme
-$primary-background-dark: $dark-overcast-dark;
-$primary-text-dark: $paper;
-$accent-color-dark: $lavender;
-$nav-background-dark: $lavender;
-$nav-accent-dark: $overcast-dark;
-$second-accent-dark: $dusty-dark;
+$primary-background-dark: $medium-grey;
+$primary-text-dark: $white;
+$accent-color-dark: $bright-blue;
+$nav-background-dark: $dark-grey;
+$nav-accent-dark: $light-grey;
+$second-accent-dark: $bright-blue;
 
 // mixins
 @mixin display-flex($j: center, $a: center) {
@@ -69,6 +65,31 @@ $second-accent-dark: $dusty-dark;
   @media (prefers-color-scheme: light) {
     background: $b;
     color: $c;
+    button {
+      background-color: $accent-color;
+      color: $primary-background;
+      &:hover {
+        background-color: $primary-background;
+        color: $accent-color;
+      }
+    }
+    .nav-button {
+      &:hover {
+        color: $accent-color;
+      }
+      &:focus,
+      &:active {
+        outline: 1px $primary-background solid;
+        background-color: $primary-background;
+        color: $accent-color;
+      }
+    }
+    svg {
+      color: $second-accent;
+      &:hover {
+        color: $accent-color;
+      }
+    }
     a {
       color: $accent-color;
       color: $second-accent;
@@ -80,6 +101,11 @@ $second-accent-dark: $dusty-dark;
       color: $accent-color;
     }
     .project.section {
+      .project.container.index-0 {
+        h2#projects.container {
+          color: $primary-background;
+        }
+      }
       .project {
         background-color: $nav-background;
         a,
@@ -96,10 +122,31 @@ $second-accent-dark: $dusty-dark;
           background-color: $second-accent;
           color: $primary-background;
         }
-      }
-      .project.index-0 {
-        h2 {
-          color: $primary-background;
+        @media screen and (max-width: 780px) {
+          background: transparent;
+          color: $primary-text;
+          a,
+          h4,
+          svg {
+            color: $primary-text;
+            text-decoration: underline;
+            &:focus,
+            &:active {
+              color: $accent-color;
+            }
+          }
+          .project.container.index-0 {
+            h2#projects.container {
+              margin: 0;
+              padding: 0;
+              color: $primary-text;
+              display: block;
+              font-size: 2rem;
+              &:after {
+                background-color: transparent;
+              }
+            }
+          }
         }
       }
     }
@@ -113,8 +160,55 @@ $second-accent-dark: $dusty-dark;
   }
 
   @media (prefers-color-scheme: dark) {
+    nav {
+      background-color: $nav-background-dark;
+    }
+    .project.section {
+      .project {
+        background-color: $nav-background-dark;
+        a,
+        h4,
+        svg {
+          color: $primary-text-dark;
+          &:hover,
+          &:focus,
+          &:active {
+            color: $second-accent-dark;
+          }
+        }
+        .description {
+          background-color: $nav-accent-dark;
+        }
+      }
+    }
+    svg {
+      color: $second-accent-dark;
+      &:hover {
+        color: $primary-text-dark;
+      }
+    }
     background: $primary-background-dark;
     color: $primary-text-dark;
+    button {
+      background-color: $accent-color-dark;
+      color: $primary-background-dark;
+      &:hover {
+        background-color: $primary-background-dark;
+        color: $accent-color-dark;
+      }
+    }
+    .nav-button {
+      color: $accent-color-dark;
+      &:hover {
+        color: $accent-color-dark;
+      }
+      &:focus,
+      &:active {
+        outline: 1px $overcast solid;
+        background-color: $nav-accent-dark;
+        color: $primary-text-dark;
+      }
+    }
     a {
       color: $accent-color-dark;
       &:hover {
@@ -123,27 +217,6 @@ $second-accent-dark: $dusty-dark;
     }
     .accented {
       color: $second-accent-dark;
-    }
-  }
-  nav {
-    background-color: $nav-background-dark;
-  }
-  .project.section {
-    .project {
-      background-color: $nav-background-dark;
-      a,
-      h4,
-      svg {
-        color: $primary-text-dark;
-        &:hover,
-        &:focus,
-        &:active {
-          color: $second-accent;
-        }
-      }
-      .description {
-        background-color: $second-accent;
-      }
     }
   }
 }

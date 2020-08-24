@@ -4,6 +4,7 @@
   .skill-container {
     max-width: 87%;
   }
+
   h6 {
     font-weight: bold;
   }
@@ -29,6 +30,23 @@
     "top top"
     "middle-left middle-right"
     "bottom-left bottom-right";
+  @media screen and (max-width: 780px) {
+    max-width: 100%;
+    padding: 5% 0;
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "top"
+      "middle-left"
+      "middle-right"
+      "bottom-left"
+      "bottom-right";
+    .skill-container {
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  }
 }
 .skill-container {
   ul {

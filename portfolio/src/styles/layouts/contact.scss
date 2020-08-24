@@ -38,4 +38,20 @@
       }
     }
   }
+  .showMobile {
+    display: none;
+  }
+  @media screen and (max-width: 780px) {
+    @include h2-section-line(0, transparent);
+    max-width: 100%;
+    .social-links,
+    p,
+    form {
+      max-width: 100%;
+    }
+    .social-links {
+      padding-top: 5%;
+      flex-direction: column;
+    }
+  }
 }

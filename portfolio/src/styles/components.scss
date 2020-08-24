@@ -9,7 +9,7 @@ main::-webkit-scrollbar {
 }
 section {
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
 }
 
 img {
@@ -23,29 +23,13 @@ p {
 button {
   border: none;
   padding: 1% 2%;
-  background-color: $accent-color;
-  color: $primary-background;
   font-weight: bold;
   border-radius: 4px;
-  &:hover {
-    background-color: $primary-background;
-    color: $accent-color;
-  }
 }
 
 a {
   @include os-theme();
   text-decoration: none;
-  color: $accent-color;
-  &:hover {
-    color: $second-accent;
-  }
-}
-svg {
-  color: $accent-color;
-  &:hover {
-    color: $second-accent;
-  }
 }
 
 label {
@@ -82,18 +66,13 @@ textarea {
   border: none;
   font-size: 3.6rem;
   background: transparent;
-  color: $primary-background;
   font-weight: bold;
   &:hover {
     cursor: pointer;
-    color: $nav-accent;
     border: none;
   }
   &:focus,
   &:active {
-    outline: 1px $primary-background solid;
-    background-color: $primary-background;
-    color: $nav-accent;
     font-size: 3.8rem;
     margin: 2% 0;
   }

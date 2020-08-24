@@ -39,11 +39,22 @@ export default function Contact() {
 function SocialLinks({ id, link }) {
   return (
     <div className={`icon-container ${id}`}>
-      {
-        <a href={`https://${link}`} target="_blank" rel="noreferrer">
-          <SVGIcon name={id} size={50} />
-        </a>
-      }
+      <a
+        href={`https://${link}`}
+        target="_blank"
+        rel="noreferrer"
+        className="hideMobile"
+      >
+        <SVGIcon name={id} size={"70%"} />
+      </a>
+      <a
+        href={`https://${link}`}
+        target="_blank"
+        rel="noreferrer"
+        className="showMobile"
+      >
+        {link}
+      </a>
     </div>
   )
 }

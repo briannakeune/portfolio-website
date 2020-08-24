@@ -67,11 +67,17 @@ function ProjectStack({ tech }) {
 function ProjectLinks({ fe_repo, deployed_link }) {
   return (
     <div className="project-links">
-      <a href={deployed_link}>
-        <SVGIcon name={"external-link-symbol"} size={30} />
+      <a href={deployed_link} className="hideMobile">
+        <SVGIcon name={"external-link-symbol"} />
       </a>
-      <a href={fe_repo}>
-        <SVGIcon name={"github-logo"} size={30} />
+      <a href={fe_repo} className="hideMobile">
+        <SVGIcon name={"github-logo"} />
+      </a>
+      <a href={deployed_link} className="showMobile">
+        deployed link
+      </a>
+      <a href={fe_repo} className="showMobile">
+        source code
       </a>
     </div>
   )

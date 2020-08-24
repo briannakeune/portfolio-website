@@ -26,4 +26,24 @@ body {
   #projects.container {
     padding-top: 7%;
   }
+  .skills.section {
+    padding-top: 7%;
+    display: none;
+    @media screen and (max-width: 780px) {
+      display: block;
+    }
+  }
+  .showMobile {
+    display: none;
+  }
+  @media screen and (max-width: 780px) {
+    .showMobile {
+      display: block;
+      padding: 1% 0;
+      text-decoration: underline;
+    }
+    .hideMobile {
+      display: none;
+    }
+  }
 }

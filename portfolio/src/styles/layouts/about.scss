@@ -18,4 +18,20 @@
       border-radius: 50%;
     }
   }
+
+  @media screen and (max-width: 780px) {
+    @include h2-section-line(0, transparent);
+    .about.container {
+      .content {
+        max-width: 90%;
+        p {
+          max-width: 100%;
+          font-size: 1.6rem;
+        }
+      }
+    }
+    .about-skills-container {
+      display: none;
+    }
+  }
 }

@@ -5,7 +5,7 @@ import flaticon from "../images/icons-sprite.svg"
 export default function SVGIcon({
   name,
   color = `currentColor`,
-  size = 24,
+  size = "100%",
   ...rest
 }) {
   return (

@@ -48,7 +48,14 @@
       .project-links {
         @include display-flex(flex-end);
         a {
-          padding: 0 3.5%;
+          margin-left: 3.5%;
+          height: 5%;
+          width: 5%;
+          @media screen and (max-width: 780px) {
+            font-size: 1.4rem;
+            height: 100%;
+            width: 100%;
+          }
         }
       }
     }
@@ -63,6 +70,10 @@
         font-size: 1.3rem;
         padding-top: 2%;
       }
+    }
+
+    @media screen and (max-width: 780px) {
+      clip-path: none;
     }
   }
 
@@ -88,6 +99,9 @@
     .project-links {
       @include display-flex(flex-start);
     }
+    @media screen and (max-width: 780px) {
+      clip-path: none;
+    }
   }
 
   .project.index-0 {
@@ -99,6 +113,62 @@
     }
     .project-content {
       top: 15%;
+    }
+  }
+
+  .project.index-0,
+  .project.index-1,
+  .project.index-2 {
+    @media screen and (max-width: 780px) {
+      max-width: 100%;
+      h2 {
+        @include display-flex(flex-start);
+      }
+      .project-content {
+        @include display-flex();
+        flex-direction: column;
+        top: 0;
+        padding-top: 10%;
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+        .title {
+          flex-direction: column;
+          h4 {
+            font-size: 2rem;
+            margin: 0;
+          }
+        }
+        .description {
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          font-size: 1.6rem;
+          max-width: 100%;
+          margin: 3% auto;
+        }
+      }
+      ul {
+        justify-content: center;
+      }
+      .project-links {
+        @include display-flex(flex-end);
+      }
+    }
+    .project-img {
+      @include responsive-container(1200px, 1200px);
+    }
+  }
+  // @media screen and (min-width: 680px) and (max-width: 780px) {
+  //   .project-img {
+  //     @include responsive-container(580px, 580px);
+  //   }
+  // }
+  @media screen and (min-width: 300px) and (max-width: 680px) {
+    .project-img {
+      @include responsive-container(300px, 300px);
     }
   }
 }

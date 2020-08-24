@@ -23,7 +23,9 @@ export default function About() {
           <img src="https://via.placeholder.com/300" alt="place holder" />
         </div>
       </div>
-      <Skills />
+      <div className="about-skills-container">
+        <Skills />
+      </div>
     </section>
   )
 }
