@@ -1,0 +1,21 @@
+.about.section {
+  @media (prefers-color-scheme: light) {
+    @include h2-section-line(12%, $primary-text);
+  }
+  @media (prefers-color-scheme: dark) {
+    @include h2-section-line(12%, $primary-text-dark);
+  }
+  .about.container {
+    .content {
+      padding: 3% 0;
+      @include display-flex(space-between);
+      max-width: 63%;
+    }
+    p {
+      max-width: 50%;
+    }
+    img {
+      border-radius: 50%;
+    }
+  }
+}

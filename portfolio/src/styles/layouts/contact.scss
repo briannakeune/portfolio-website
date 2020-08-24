@@ -1,0 +1,41 @@
+.contact.container {
+  @media (prefers-color-scheme: light) {
+    @include h2-section-line(19%, $primary-text);
+  }
+  @media (prefers-color-scheme: dark) {
+    @include h2-section-line(19%, $primary-text-dark);
+  }
+  max-width: 80%;
+  .social-links,
+  p,
+  form {
+    padding: 3% 0;
+  }
+  .social-links {
+    @include display-flex(space-around);
+    max-width: 45%;
+    .email {
+      display: none;
+    }
+  }
+  p {
+    text-align: center;
+    max-width: 45%;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  form {
+    @include display-flex();
+    flex-direction: column;
+    max-width: 55%;
+    button {
+      margin: 2% 0;
+      height: 50px;
+      width: 150px;
+      align-self: flex-end;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

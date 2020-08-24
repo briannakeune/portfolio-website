@@ -1,0 +1,104 @@
+.project.section {
+  .project {
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+    margin: 0;
+    max-width: 81%;
+    height: 100vh;
+    color: white;
+    a,
+    h4 {
+      font-weight: bold;
+      background: transparent;
+      text-shadow: none;
+      &:hover,
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+    .project-content {
+      @include display-flex();
+      margin: 0 auto;
+      position: relative;
+      top: 30%;
+      .project-info {
+        padding-top: 3%;
+      }
+      .description {
+        padding: 5%;
+        margin: 4% 0;
+        transition: "all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0";
+        position: relative;
+        z-index: 1;
+        right: 25%;
+        border-radius: 3px;
+        text-align: left;
+        &:hover {
+          box-shadow: rgba(63, 73, 61, 0.4) 0px 20px 30px -15px;
+        }
+      }
+      ul {
+        @include display-flex(flex-end);
+        li {
+          font-size: 1.4rem;
+          font-weight: bold;
+          padding: 3%;
+        }
+      }
+      .project-links {
+        @include display-flex(flex-end);
+        a {
+          padding: 0 3.5%;
+        }
+      }
+    }
+    .title {
+      @include display-flex(flex-start);
+      flex-direction: row-reverse;
+      h4 {
+        margin-left: 20px;
+      }
+      p {
+        font-style: italic;
+        font-size: 1.3rem;
+        padding-top: 2%;
+      }
+    }
+  }
+
+  .project.index-1 {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+    .project-content {
+      flex-direction: row-reverse;
+      .title {
+        flex-direction: row;
+        text-align: left;
+        h4 {
+          margin-right: 20px;
+          margin-left: 0;
+        }
+      }
+      .description {
+        left: 22%;
+      }
+    }
+    ul {
+      justify-content: flex-start;
+    }
+    .project-links {
+      @include display-flex(flex-start);
+    }
+  }
+
+  .project.index-0 {
+    @include h2-section-line(17%, $white);
+    h2 {
+      background: transparent;
+      font-weight: bold;
+      padding: 0;
+    }
+    .project-content {
+      top: 15%;
+    }
+  }
+}

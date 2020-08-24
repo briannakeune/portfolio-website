@@ -1,0 +1,21 @@
+.intro.section {
+  display: flex;
+  flex-direction: column;
+  padding: 20% 9%;
+  h1 {
+    white-space: pre-wrap;
+    .greeting {
+      font-size: 1.6rem;
+    }
+    .header-name {
+      font-weight: bold;
+    }
+  }
+  .tagline {
+    padding: 2.5% 0;
+    font-size: 3.2rem;
+  }
+  .one-liner {
+    font-size: 2rem;
+  }
+}

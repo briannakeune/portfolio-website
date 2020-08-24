@@ -1,0 +1,149 @@
+// fonts
+
+// variables
+
+// muted and minimal - light
+$white: #eeeeee;
+$dusty: #96858f;
+$lavender: #6d7993;
+$accent-lavender: #5f7096;
+$overcast: #9099a2;
+$dark-overcast: #5f6469;
+$paper: #e9e9e9;
+// muted and minimal - dark
+$dusty-dark: #be91ae;
+$lavender-dark: #44465c;
+$accent-lavender-dark: #7c91c0;
+$overcast-dark: #a2acb6;
+$dark-overcast-dark: #474b4e;
+
+// light-theme
+$primary-background: $paper;
+$primary-text: $dark-overcast;
+$accent-color: $accent-lavender;
+$nav-background: $lavender;
+$nav-accent: $overcast;
+$second-accent: $dusty;
+
+// dark-theme
+$primary-background-dark: $dark-overcast-dark;
+$primary-text-dark: $paper;
+$accent-color-dark: $lavender;
+$nav-background-dark: $lavender;
+$nav-accent-dark: $overcast-dark;
+$second-accent-dark: $dusty-dark;
+
+// mixins
+@mixin display-flex($j: center, $a: center) {
+  display: flex;
+  justify-content: $j;
+  align-content: $a;
+}
+
+@mixin responsive-container($mwidth: 500px, $width: 100%, $height: inherit) {
+  height: $height;
+  width: $width;
+  max-width: $mwidth;
+}
+
+@mixin section-line($m: 1%, $c: $dark-grey) {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 300px;
+  background: $c;
+  position: relative;
+  top: -16px;
+  margin-left: $m;
+}
+
+@mixin h2-section-line($margin: 1%, $c: $dark-grey) {
+  h2 {
+    &:after {
+      @include section-line($margin, $c);
+    }
+  }
+}
+
+@mixin os-theme($b: $primary-background, $c: $primary-text) {
+  @media (prefers-color-scheme: light) {
+    background: $b;
+    color: $c;
+    a {
+      color: $accent-color;
+      color: $second-accent;
+    }
+    nav {
+      background-color: $nav-background;
+    }
+    .accented {
+      color: $accent-color;
+    }
+    .project.section {
+      .project {
+        background-color: $nav-background;
+        a,
+        h4,
+        svg {
+          color: $primary-background;
+          &:hover,
+          &:focus,
+          &:active {
+            color: $second-accent;
+          }
+        }
+        .description {
+          background-color: $second-accent;
+          color: $primary-background;
+        }
+      }
+      .project.index-0 {
+        h2 {
+          color: $primary-background;
+        }
+      }
+    }
+    .contact.container {
+      form {
+        button:hover {
+          color: $second-accent;
+        }
+      }
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: $primary-background-dark;
+    color: $primary-text-dark;
+    a {
+      color: $accent-color-dark;
+      &:hover {
+        color: $second-accent-dark;
+      }
+    }
+    .accented {
+      color: $second-accent-dark;
+    }
+  }
+  nav {
+    background-color: $nav-background-dark;
+  }
+  .project.section {
+    .project {
+      background-color: $nav-background-dark;
+      a,
+      h4,
+      svg {
+        color: $primary-text-dark;
+        &:hover,
+        &:focus,
+        &:active {
+          color: $second-accent;
+        }
+      }
+      .description {
+        background-color: $second-accent;
+      }
+    }
+  }
+}

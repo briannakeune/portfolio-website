@@ -1,0 +1,45 @@
+.skills-container {
+  max-width: 53%;
+
+  .skill-container {
+    max-width: 87%;
+  }
+  h6 {
+    font-weight: bold;
+  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  .javascript {
+    grid-area: top;
+  }
+  .html {
+    grid-area: middle-left;
+  }
+  .python {
+    grid-area: middle-right;
+  }
+  .css {
+    grid-area: bottom-left;
+  }
+  .databases {
+    grid-area: bottom-right;
+  }
+  grid-template-areas:
+    "top top"
+    "middle-left middle-right"
+    "bottom-left bottom-right";
+}
+.skill-container {
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4% 0;
+    li {
+      padding: 2% 0;
+    }
+  }
+  .javascript-ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

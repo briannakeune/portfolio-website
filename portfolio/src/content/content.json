@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Brianna Keune",
+    "avatar": null,
+    "personal-statement": "I spent the last few years being a barista in Milwaukee while searching for a career I’m passionate about. In 2016 I decided I wanted to try my hand at creating a blog about all of my home ec knowledge. I created a WordPress site with a template, and I found that I loved trying to customize and update the template rather than write. The site never launched. I started to learn HTML by myself and found sticking to a self-learning schedule was not going to work for me. So in 2019, I joined Lambda school for it's accelerated comprehensive program and found my passion for creating APIs with a focus on how that data is presented to the audience.",
+    "title": "Fullstack Web Developer",
+    "interests": [],
+    "skills": [
+      {
+        "id": "JavaScript",
+        "icon": "",
+        "sub-skills": [
+          { "id": "ReactJS", "icon": "", "type": "framework" },
+          { "id": "NodeJS", "icon": "", "type": "framework" },
+          { "id": "Express", "icon": "", "type": "framework" },
+          { "id": "Jest", "icon": "", "type": "testing" },
+          { "id": "Enzyme", "icon": "", "type": "testing" },
+          { "id": "React Testing Library", "icon": "", "type": "testing" },
+          { "id": "Redux", "icon": "", "type": "state management" }
+        ]
+      },
+      {
+        "id": "CSS",
+        "icon": "",
+        "sub-skills": [
+          { "id": "SCSS", "icon": "", "type": "preprocessor" },
+          { "id": "MaterialUI", "icon": "", "type": "library" }
+        ]
+      },
+      {
+        "id": "Databases",
+        "icon": "",
+        "sub-skills": [
+          { "id": "SQLite3", "icon": "", "type": "language" },
+          { "id": "PostgreSQL", "icon": "", "type": "language" }
+        ]
+      },
+      { "id": "HTML", "icon": "", "sub-skills": [] },
+      { "id": "Python", "icon": "", "sub-skills": [] }
+    ],
+    "contact": [
+      { "id": "email", "link": "contact@briannakeune.com", "icon": null },
+      { "id": "github-logo", "link": "github.com/briannakeune", "icon": null },
+      {
+        "id": "linkedin",
+        "link": "linkedin.com/in/brianna-keune",
+        "icon": null
+      },
+      {
+        "id": "twitter-social-logotype",
+        "link": "twitter.com/BriannaKeune",
+        "icon": null
+      }
+    ],
+    "projects": [
+      {
+        "name": "Gróa",
+        "deployed-link": "https://www.groa.us/",
+        "repos": {
+          "fe": "https://github.com/Lambda-School-Labs/Groa-fe",
+          "be": "https://github.com/Lambda-School-Labs/Groa-be"
+        },
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in. An unbiased movie recommender to summon the perfect movie for you.",
+        "date": { "start": "02-2020", "end": "03-2020" },
+        "responsibilities": [
+          "Implemented uploading and decompiling  file from Letterboxd into the database with React, Node, and csv-parser",
+          "Created team workflow for environments with AWS",
+          "Implemented a testing work flow with Jest and React Testing Library",
+          "Updated UI to be mobile responsive with Sass"
+        ],
+        "position": "Fullstack Web Dev",
+        "tech": ["ReactJS", "NodeJS", "Express", "Redux", "AWS", "Jest"],
+        "preview-image": null
+      },
+      {
+        "name": "Appraiser's BFF",
+        "deployed-link": "https://www.appraiserbff.xyz/",
+        "repos": {
+          "fe": "https://github.com/bw-appraisers-bff/front-end",
+          "be": null
+        },
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in. A Zillow's Zestimate clone",
+        "date": { "start": null, "end": "10-2019" },
+        "responsibilities": [
+          "Achieved MVP within ~4 days",
+          "Led a team of 3 front-end web developers to plan and create with React and Figma",
+          "Implemented state management for client's data with Redux"
+        ],
+        "position": "Front-end dev",
+        "tech": ["ReactJS", "Redux"],
+        "preview-image": null
+      },
+      {
+        "name": "Lambda Bug Tracker",
+        "deployed-link": "https://lambda-bug-tracker.firebaseapp.com/",
+        "repos": {
+          "fe": "https://github.com/Lambda-Bug-Tracker/Front-End",
+          "be": "https://github.com/Lambda-Bug-Tracker/Back-End"
+        },
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in. A Jira clone built during Lambda's Winter Hackathon",
+        "date": { "start": null, "end": "01-2020" },
+        "responsibilities": [
+          "Achieved API MVP within ~30 hours",
+          "Developed SQLite3 database design with DBdesigner and KnexJS",
+          "Deployed database with PostgreSQL for persistent data on Heroku",
+          "Created API documentation with apidocs"
+        ],
+        "position": "Back-end Dev",
+        "tech": ["NodeJS", "Express", "Firebase", "SQLite3", "PostgreSQL"],
+        "preview-image": null
+      }
+    ]
+  }
+]
