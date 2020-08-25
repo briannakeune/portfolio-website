@@ -60,7 +60,7 @@
           "fe": "https://github.com/Lambda-School-Labs/Groa-fe",
           "be": "https://github.com/Lambda-School-Labs/Groa-be"
         },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in. An unbiased movie recommender to summon the perfect movie for you.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,  Duis aute irure dolor in. An unbiased movie recommender to summon the perfect movie for you.",
         "date": { "start": "02-2020", "end": "03-2020" },
         "responsibilities": [
           "Implemented uploading and decompiling  file from Letterboxd into the database with React, Node, and csv-parser",

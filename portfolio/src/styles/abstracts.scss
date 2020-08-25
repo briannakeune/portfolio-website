@@ -104,6 +104,13 @@ $second-accent-dark: $bright-blue;
       .project.container.index-0 {
         h2#projects.container {
           color: $primary-background;
+          @media screen and (max-width: 780px) {
+            color: $primary-text;
+            font-size: 2.8rem;
+            &:after {
+              @include h2-section-line(0, transparent);
+            }
+          }
         }
       }
       .project {
@@ -129,6 +136,8 @@ $second-accent-dark: $bright-blue;
           h4,
           svg {
             color: $primary-text;
+            margin: 0;
+            padding: 0;
             text-decoration: underline;
             &:focus,
             &:active {
@@ -164,6 +173,16 @@ $second-accent-dark: $bright-blue;
       background-color: $nav-background-dark;
     }
     .project.section {
+      h2#projects.container {
+        color: $primary-background-dark;
+        @media screen and (max-width: 780px) {
+          color: $primary-text-dark;
+          font-size: 2.8rem;
+          &:after {
+            @include h2-section-line(0, transparent);
+          }
+        }
+      }
       .project {
         background-color: $nav-background-dark;
         a,
@@ -178,6 +197,34 @@ $second-accent-dark: $bright-blue;
         }
         .description {
           background-color: $nav-accent-dark;
+        }
+        @media screen and (max-width: 780px) {
+          background: transparent;
+          color: $primary-text-dark;
+          a,
+          h4,
+          svg {
+            color: $primary-text-dark;
+            margin: 0;
+            padding: 0;
+            text-decoration: underline;
+            &:focus,
+            &:active {
+              color: $accent-color-dark;
+            }
+          }
+          .project.container.index-0 {
+            h2#projects.container {
+              margin: 0;
+              padding: 0;
+              color: $primary-text-dark;
+              display: block;
+              font-size: 2rem;
+              &:after {
+                background-color: transparent;
+              }
+            }
+          }
         }
       }
     }

@@ -16,6 +16,19 @@
         outline: none;
       }
     }
+    .project-img {
+      img {
+        max-width: 780px;
+        width: 780px;
+        height: auto;
+        @media screen and (max-width: 780px) {
+          max-width: 580px;
+        }
+        @media screen and (max-width: 400px) {
+          max-width: 300px;
+        }
+      }
+    }
     .project-content {
       @include display-flex();
       margin: 0 auto;
@@ -156,19 +169,6 @@
       .project-links {
         @include display-flex(flex-end);
       }
-    }
-    .project-img {
-      @include responsive-container(1200px, 1200px);
-    }
-  }
-  // @media screen and (min-width: 680px) and (max-width: 780px) {
-  //   .project-img {
-  //     @include responsive-container(580px, 580px);
-  //   }
-  // }
-  @media screen and (min-width: 300px) and (max-width: 680px) {
-    .project-img {
-      @include responsive-container(300px, 300px);
     }
   }
 }
